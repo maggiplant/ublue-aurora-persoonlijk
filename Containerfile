@@ -11,10 +11,10 @@ FROM ghcr.io/ublue-os/aurora-dx-nvidia-open:stable
 ## thus its contents might be wiped out when bootc deploys an image, making it troublesome for
 ## some packages. Eg, google-chrome, docker-desktop.
 ##
-## Uncomment the following line if one desires to make /opt immutable and be able to be used
+## Uncomment the following line if one desires to make /opt mutable and be able to be used
 ## by the package manager.
 
-# RUN rm /opt && mkdir /opt
+RUN rm /opt && mkdir /opt
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script

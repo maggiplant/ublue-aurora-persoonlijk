@@ -23,7 +23,7 @@ rm emacs.tar.xz
 cd emacs
 
 # Configure, build and install
-./configure -C --with-native-compilation=aot --disable-gc-mark-trace --with-imagemagick --with-mailutils --with-tree-sitter --with-pgtk
+./configure --prefix=/opt/emacs -C --with-native-compilation --disable-gc-mark-trace --with-imagemagick --with-mailutils --with-tree-sitter --with-pgtk
 sudo make install
 
 # Remove the code
